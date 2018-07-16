@@ -1,10 +1,15 @@
 const router = require('express').Router();
-const controller = require('./user.controller')
+const controllerUser = require('./user.controller')
+const controllerTweet = require('./tweet.controller');
 
-router.get('/', controller.index);
-router.get('/:id',controller.show);
-router.post('/',controller.create);
-router.put('/:name', controller.update);
-router.delete('/:id',controller.destroy);
+router.get('/user', controllerUser.index);
+router.get('/user/:id',controllerUser.show);
+router.post('/user',controllerUser.create);
+router.put('/user/:name', controllerUser.update);
+router.delete('/user/:id',controllerUser.destroy);
+
+/*RUTAS TWEET*/
+router.get('/tweet', controllerTweet.index);
+router.post('/tweet', controllerTweet.create);
 
 module.exports = router;

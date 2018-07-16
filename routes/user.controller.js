@@ -1,8 +1,8 @@
-const createUsers = require('../lib/createUsers');
-const selectUserByID = require('../lib/selectUserByID');
-const showUsers = require('../lib/showUsers');
-const updateUser = require('../lib/updateUsers');
-const removeUser = require('../lib/removeUsers');
+const createUsers = require('../lib/users/createUsers');
+const selectUserByID = require('../lib/users/selectUserByID');
+const showUsers = require('../lib/users/showUsers');
+const updateUser = require('../lib/users/updateUsers');
+const removeUser = require('../lib/users/removeUsers');
 
 const index = (req, resp) => showUsers(resp);
 const show = (req,res) => selectUserByID(req.params.id,res);
